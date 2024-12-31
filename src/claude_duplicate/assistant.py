@@ -1,9 +1,1 @@
-class Assistant:
-    def __init__(self, model_name='gpt-3.5-turbo'):
-        self.model_name = model_name
-        self.conversation_history = []
-
-    def process(self, query):
-        """Process user query and return response"""
-        # Add processing logic here
-        return 'Response to: ' + query
+Y2xhc3MgQXNzaXN0YW50OgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG1vZGVsX25hbWU9J2dwdC0zLjUtdHVyYm8nKToKICAgICAgICBzZWxmLm1vZGVsX25hbWUgPSBtb2RlbF9uYW1lCiAgICAgICAgc2VsZi5jb252ZXJzYXRpb25faGlzdG9yeSA9IFtdCgogICAgZGVmIHByb2Nlc3Moc2VsZiwgcXVlcnkpOgogICAgICAgICIiIlByb2Nlc3MgdXNlciBxdWVyeSBhbmQgcmV0dXJuIHJlc3BvbnNlIiIiCiAgICAgICAgIyBBZGQgcHJvY2Vzc2luZyBsb2dpYyBoZXJlCiAgICAgICAgcmV0dXJuICdSZXNwb25zZSB0bzogJyArIHF1ZXJ5
