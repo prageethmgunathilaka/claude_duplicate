@@ -1,1 +1,15 @@
-{"content": "aW1wb3J0IHB5dGVzdApmcm9tIGNsYXVkZV9kdXBsaWNhdGUgaW1wb3J0IEFzc2lzdGFudAoKZGVmIHRlc3RfYXNzaXN0YW50X2luaXQoKToKICAgIGFzc2lzdGFudCA9IEFzc2lzdGFudCgpCiAgICBhc3NlcnQgYXNzaXN0YW50Lm1vZGVsX25hbWUgPT0gJ2dwdC0zLjUtdHVyYm8nCiAgICBhc3NlcnQgYXNzaXN0YW50LmNvbnZlcnNhdGlvbl9oaXN0b3J5ID09IFtdCgpkZWYgdGVzdF9xdWVyeV9wcm9jZXNzaW5nKCk6CiAgICBhc3Npc3RhbnQgPSBBc3Npc3RhbnQoKQogICAgcmVzcG9uc2UgPSBhc3Npc3RhbnQucHJvY2VzcygnSGVsbG8nKQogICAgYXNzZXJ0IGlzaW5zdGFuY2UocmVzcG9uc2UsIHN0cikKICAgIGFzc2VydCAnSGVsbG8nIGluIHJlc3BvbnNl", "encoding": "base64"}
+
+# Tests for Claude Duplicate
+import pytest
+from claude_duplicate import Assistant
+
+def test_assistant_init():
+    assistant = Assistant()
+    assert assistant.model_name == 'gpt-3.5-turbo'
+    assert assistant.conversation_history == []
+
+def test_query_processing():
+    assistant = Assistant()
+    response = assistant.process('Hello')
+    assert isinstance(response, str)
+    assert 'Hello' in response
